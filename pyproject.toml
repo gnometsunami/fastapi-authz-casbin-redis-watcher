@@ -1,0 +1,19 @@
+[project]
+name = "fastapi-authz-casbin-redis-watcher"
+version = "0.1.0"
+description = "Proof of concept for FastAPI + Cabin Redis Watcher"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "casbin>=1.43.0",
+    "casbin-redis-adapter",
+    "casbin-redis-watcher",
+    "fastapi[standard]>=0.134.0",
+    "pyjwt>=2.11.0",
+    "redis>=7,<8",
+]
+
+
+[tool.uv.sources]
+casbin-redis-adapter = { git = "https://github.com/gnometsunami/redis-adapter" }
+casbin-redis-watcher = { git = "https://github.com/gnometsunami/redis-watcher" }
